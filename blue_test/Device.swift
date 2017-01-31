@@ -3,7 +3,7 @@
 //  blue_test
 //
 //  Created by HamiltonMac on 10/12/16.
-//  Copyright © 2016 HamiltonMac. All rights reserved.
+//  Copyright © 2016 HamiltonMac. All rights reserved to Hamilton
 //
 
 import Foundation
