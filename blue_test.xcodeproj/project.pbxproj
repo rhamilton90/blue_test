@@ -13,6 +13,8 @@
 		0231A2A01DAF45F700A9CDBD /* blue_test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0231A29E1DAF45F700A9CDBD /* blue_test.xcdatamodeld */; };
 		0231A2A21DAF45F700A9CDBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0231A2A11DAF45F700A9CDBD /* Assets.xcassets */; };
 		0231A2A51DAF45F700A9CDBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0231A2A31DAF45F700A9CDBD /* LaunchScreen.storyboard */; };
+		0231A2AD1DAF483F00A9CDBD /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0231A2AC1DAF483F00A9CDBD /* Device.swift */; };
+		665A960BFB4C775727E36A73 /* Pods_blue_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614D58698292D2E228F5D418 /* Pods_blue_test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		0231A2A11DAF45F700A9CDBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0231A2A41DAF45F700A9CDBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0231A2A61DAF45F700A9CDBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0231A2AC1DAF483F00A9CDBD /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		2C810AEE5510FDCAEF860988 /* Pods-blue_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blue_test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-blue_test/Pods-blue_test.debug.xcconfig"; sourceTree = "<group>"; };
+		2FFAB1B81F1963DB5BB306B0 /* Pods-blue_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blue_test.release.xcconfig"; path = "Pods/Target Support Files/Pods-blue_test/Pods-blue_test.release.xcconfig"; sourceTree = "<group>"; };
+		614D58698292D2E228F5D418 /* Pods_blue_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blue_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665A960BFB4C775727E36A73 /* Pods_blue_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				0231A2961DAF45F700A9CDBD /* blue_test */,
 				0231A2951DAF45F700A9CDBD /* Products */,
+				91A01AE55892653DDFB06A83 /* Pods */,
+				7BED685324F8708B03E861B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +67,7 @@
 			children = (
 				0231A2971DAF45F700A9CDBD /* AppDelegate.swift */,
 				0231A2991DAF45F700A9CDBD /* ViewController.swift */,
+				0231A2AC1DAF483F00A9CDBD /* Device.swift */,
 				0231A29B1DAF45F700A9CDBD /* Main.storyboard */,
 				0231A2A11DAF45F700A9CDBD /* Assets.xcassets */,
 				0231A2A31DAF45F700A9CDBD /* LaunchScreen.storyboard */,
@@ -67,6 +77,23 @@
 			path = blue_test;
 			sourceTree = "<group>";
 		};
+		7BED685324F8708B03E861B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				614D58698292D2E228F5D418 /* Pods_blue_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91A01AE55892653DDFB06A83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C810AEE5510FDCAEF860988 /* Pods-blue_test.debug.xcconfig */,
+				2FFAB1B81F1963DB5BB306B0 /* Pods-blue_test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0231A2A91DAF45F700A9CDBD /* Build configuration list for PBXNativeTarget "blue_test" */;
 			buildPhases = (
+				B9F18C33BF1F2F4904CA48F9 /* [CP] Check Pods Manifest.lock */,
 				0231A2901DAF45F700A9CDBD /* Sources */,
 				0231A2911DAF45F700A9CDBD /* Frameworks */,
 				0231A2921DAF45F700A9CDBD /* Resources */,
+				9162FDDF9C7F4FECA8CA3132 /* [CP] Embed Pods Frameworks */,
+				70C4E4933660E1B806C0EBA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -94,13 +124,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = HamiltonMac;
 				TargetAttributes = {
 					0231A2931DAF45F700A9CDBD = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 6BL885WGZZ;
+						DevelopmentTeam = GYQ7Y9WEB3;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Siri = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -135,6 +174,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		70C4E4933660E1B806C0EBA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blue_test/Pods-blue_test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9162FDDF9C7F4FECA8CA3132 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blue_test/Pods-blue_test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9F18C33BF1F2F4904CA48F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0231A2901DAF45F700A9CDBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,6 +230,7 @@
 				0231A2A01DAF45F700A9CDBD /* blue_test.xcdatamodeld in Sources */,
 				0231A29A1DAF45F700A9CDBD /* ViewController.swift in Sources */,
 				0231A2981DAF45F700A9CDBD /* AppDelegate.swift in Sources */,
+				0231A2AD1DAF483F00A9CDBD /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,9 +274,11 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -208,7 +298,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -235,9 +325,11 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -251,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -261,23 +353,34 @@
 		};
 		0231A2AA1DAF45F700A9CDBD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C810AEE5510FDCAEF860988 /* Pods-blue_test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6BL885WGZZ;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = GYQ7Y9WEB3;
 				INFOPLIST_FILE = blue_test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.staptix.blue-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		0231A2AB1DAF45F700A9CDBD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FFAB1B81F1963DB5BB306B0 /* Pods-blue_test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6BL885WGZZ;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = GYQ7Y9WEB3;
 				INFOPLIST_FILE = blue_test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.staptix.blue-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +407,7 @@
 				0231A2AB1DAF45F700A9CDBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
