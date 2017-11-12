@@ -106,7 +106,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         //--------------------------------------------------------------
         // check for a peripheral object
         guard let arduino = self.arduino else {
-            print("something happened3")
+            print("something happened3 new")
             return
         }
         
@@ -152,12 +152,13 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
-        print("Name : \(advertisementData[CBAdvertisementDataLocalNameKey] as? String)!")
-        
+        //print("Name : \(advertisementData[CBAdvertisementDataLocalNameKey] as? String ?? )!")
+        //print(peripheral.name!)
         if (advertisementData[CBAdvertisementDataLocalNameKey] as? String) != nil {
         
-        if peripheral.name != "Smart Light Switch"
+        if peripheral.name != "AutoRide"
         {
+            print(peripheral.name!)
             return;
         }
         
@@ -182,7 +183,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             // connect to the peripheral
             //print("Connecting to peripheral: \(peripheral.services)")
             centralManager?.connect(arduino!, options: nil)
-            print("Connecting to peripheral: \(arduino?.name)")
+            print("Connecting to peripheral: \(String(describing: arduino?.name))")
         }
         
         self.centralManager.stopScan()
@@ -209,7 +210,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     
         // Now that we've successfully connected to the peripheral, let's discover the services.
         // This time, we will search for the transfer service UUID
-        print("Looking for Transfer Service...\(arduino)")
+        print("Looking for Transfer Service...\(String(describing: arduino))")
         print("\([CBUUID.init(string: Device.TransferService)])")
         //self.peripheral!.discoverServices([CBUUID.init(string: Device.TransferService)])
         arduino!.discoverServices(nil)
@@ -296,7 +297,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         print("Discovered Services!!!")
         
         if error != nil {
-            print("Error discovering services: \(error?.localizedDescription)")
+            print("Error discovering services: \(String(describing: error?.localizedDescription))")
             disconnect()
             return
         }
@@ -336,7 +337,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         
         
         if error != nil {
-            print("Error discovering characteristics: \(error?.localizedDescription)")
+            print("Error discovering characteristics: \(String(describing: error?.localizedDescription))")
             return
         }
         print("didDiscover")
@@ -383,7 +384,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         print("something happened3")
         // if there was an error then print it and bail out
         if error != nil {
-            print("Error updating value for characteristic: \(characteristic) - \(error?.localizedDescription)")
+            print("Error updating value for characteristic: \(characteristic) - \(String(describing: error?.localizedDescription))")
             return
         }
         
@@ -416,7 +417,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             dataBuffer.append(value)
             print("Next chunk received: \(nextChunk)")
             if let buffer = self.dataBuffer {
-                print("Transfer buffer: \(String(data: buffer as Data, encoding: String.Encoding.utf8))")
+                print("Transfer buffer: \(String(describing: String(data: buffer as Data, encoding: String.Encoding.utf8)))")
             }
         }
     }
@@ -433,7 +434,7 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         // if there was an error then print it and bail out
         print("didDiscover2")
         if error != nil {
-            print("Error changing notification state: \(error?.localizedDescription)")
+            print("Error changing notification state: \(String(describing: error?.localizedDescription))")
             return
         }
         
@@ -453,9 +454,9 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
     
     @IBAction func onBtnTapped(_ sender: Any) {
-        
+        print("On Button Tapped")
         if let char = ledCharacteristic {
-            
+            print("ledCharacteristic")
             var enableValue:UInt8 = 1
             let enableBytes = NSData(bytes: &enableValue, length: MemoryLayout<UInt8>.size)
 
