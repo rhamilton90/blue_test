@@ -16,4 +16,4 @@ This README would normally document whatever steps are necessary to get your app
 
 ### Who do I talk to? ###
 
-* Contact reggieh2012@gmail.com
+* Contact lvlddesign.com
